@@ -1,0 +1,163 @@
+name: sus-platform
+
+services:
+
+  # ========================================================
+  # INTEGRAÇÃO
+  # ========================================================
+
+  integracao-api:
+    container_name: sus-data-integration-service
+    build:
+      context: ./integracao-api
+      dockerfile: Dockerfile
+    environment:
+      QUARKUS_HTTP_HOST: 0.0.0.0
+      QUARKUS_HTTP_PORT: 8080
+
+      DADOS_ABERTOS_API_URL: https://apidadosabertos.saude.gov.br
+      DADOS_IBGE_API_URL: https://servicodados.ibge.gov.br/api
+
+      REST_CLIENT_LOG_LEVEL: INFO
+      REST_CLIENT_LOG_SCOPE: none
+    ports:
+      - "8080:8080"
+    networks:
+      - sus-network
+    restart: unless-stopped
+
+
+  # ========================================================
+  # BANCO DO REMEDSUS
+  # ========================================================
+
+  remedsus-postgres:
+    image: postgres:16
+    container_name: remedsus-postgres
+    environment:
+      POSTGRES_DB: remedsus
+      POSTGRES_USER: remedsus
+      POSTGRES_PASSWORD: remedsus
+    ports:
+      - "5433:5432"
+    volumes:
+      - remedsus_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U remedsus -d remedsus" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - sus-network
+    restart: unless-stopped
+
+
+  # ========================================================
+  # REMEDSUS
+  # ========================================================
+
+  remedsus:
+    container_name: remedsus
+    build:
+      context: ./remedsus/remedsus
+      dockerfile: src/main/docker/Dockerfile.jvm
+    environment:
+      QUARKUS_HTTP_HOST: 0.0.0.0
+      QUARKUS_HTTP_PORT: 8080
+
+      QUARKUS_DATASOURCE_USERNAME: remedsus
+      QUARKUS_DATASOURCE_PASSWORD: remedsus
+      QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://remedsus-postgres:5432/remedsus
+
+      QUARKUS_FLYWAY_MIGRATE_AT_START: "true"
+      QUARKUS_FLYWAY_CLEAN_AT_START: "false"
+
+      INTEGRATION_API_URL: http://integracao-api:8080
+    ports:
+      - "8081:8080"
+    depends_on:
+      remedsus-postgres:
+        condition: service_healthy
+      integracao-api:
+        condition: service_started
+    networks:
+      - sus-network
+    restart: unless-stopped
+
+
+  # ========================================================
+  # BANCO DO CARDIORADAR
+  # ========================================================
+
+  cardioradar-postgres:
+    image: postgres:16
+    container_name: cardioradar-postgres
+    environment:
+      POSTGRES_DB: cardioradar
+      POSTGRES_USER: cardioradar
+      POSTGRES_PASSWORD: cardioradar
+    ports:
+      - "5434:5432"
+    volumes:
+      - cardioradar_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U cardioradar -d cardioradar" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - sus-network
+    restart: unless-stopped
+
+
+  # ========================================================
+  # CARDIORADAR SUS
+  # ========================================================
+
+  cardioradar-sus:
+    container_name: cardioradar-sus
+    build:
+      context: ./cardioradar-sus
+      dockerfile: src/main/docker/Dockerfile.jvm
+    environment:
+      QUARKUS_HTTP_HOST: 0.0.0.0
+      QUARKUS_HTTP_PORT: 8080
+
+      QUARKUS_DATASOURCE_USERNAME: cardioradar
+      QUARKUS_DATASOURCE_PASSWORD: cardioradar
+      QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://cardioradar-postgres:5432/cardioradar
+
+      QUARKUS_DATASOURCE_JDBC_MIN_SIZE: 2
+      QUARKUS_DATASOURCE_JDBC_MAX_SIZE: 10
+
+      QUARKUS_FLYWAY_MIGRATE_AT_START: "true"
+      QUARKUS_FLYWAY_CLEAN_AT_START: "false"
+
+      INTEGRATION_API_URL: http://integracao-api:8080
+      REMEDSUS_API_URL: http://remedsus:8080
+    ports:
+      - "8082:8080"
+    depends_on:
+      cardioradar-postgres:
+        condition: service_healthy
+      integracao-api:
+        condition: service_started
+      remedsus:
+        condition: service_started
+    networks:
+      - sus-network
+    restart: unless-stopped
+
+
+networks:
+  sus-network:
+    name: sus-network
+    driver: bridge
+
+
+volumes:
+  remedsus_postgres_data:
+    name: remedsus_postgres_data
+
+  cardioradar_postgres_data:
+    name: cardioradar_postgres_data
