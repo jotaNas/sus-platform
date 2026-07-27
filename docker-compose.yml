@@ -60,7 +60,7 @@ services:
     container_name: remedsus
     build:
       context: ./remedsus/remedsus
-      dockerfile: src/main/docker/Dockerfile.jvm
+      dockerfile: Dockerfile
     environment:
       QUARKUS_HTTP_HOST: 0.0.0.0
       QUARKUS_HTTP_PORT: 8080
@@ -118,7 +118,7 @@ services:
     container_name: cardioradar-sus
     build:
       context: ./cardioradar-sus
-      dockerfile: src/main/docker/Dockerfile.jvm
+      dockerfile: Dockerfile
     environment:
       QUARKUS_HTTP_HOST: 0.0.0.0
       QUARKUS_HTTP_PORT: 8080
