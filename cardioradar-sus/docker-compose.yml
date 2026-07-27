@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: cardioradar-postgres
+    environment:
+      POSTGRES_DB: cardioradar
+      POSTGRES_USER: cardioradar
+      POSTGRES_PASSWORD: cardioradar
+    ports:
+      - "5434:5432"
+    volumes:
+      - cardioradar_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  cardioradar_postgres_data:

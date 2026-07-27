@@ -1,0 +1,359 @@
+[
+  {
+    "agregador": 4277,
+    "periodos": [
+      2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011,
+      2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+    ],
+    "sexos": [6794, 4, 5],
+    "gruposIdade": [56742, 1146, 1147, 1148, 1149, 1150, 1151, 1152, 1153],
+    "domicilios": [],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 11754,
+        "nome": "Probabilidade de morrer atribuída a doenças cardiovasculares, câncer, diabetes ou doenças respiratórias crônicas entre os 30 a 69 anos"
+      },
+      {
+        "codigo": 12948,
+        "nome": "Número de óbitos atribuídos a doenças cardiovasculares, câncer, diabetes ou doenças respiratórias crônicas na população de 30 a 69 anos"
+      }
+    ]
+  },
+  {
+    "agregador": 4419,
+    "periodos": [2013, 2019],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4396,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial"
+      },
+      {
+        "codigo": 4397,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4398,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4861,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial"
+      },
+      {
+        "codigo": 4399,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial"
+      },
+      {
+        "codigo": 4400,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4401,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4862,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial"
+      }
+    ]
+  },
+  {
+    "agregador": 4426,
+    "periodos": [2013],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4402,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa"
+      },
+      {
+        "codigo": 4403,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4404,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4863,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa"
+      },
+      {
+        "codigo": 4405,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa"
+      },
+      {
+        "codigo": 4406,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4407,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4864,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e tomaram medicamento para hipertensão nas duas últimas semanas anteriores à data da pesquisa"
+      }
+    ]
+  },
+  {
+    "agregador": 4436,
+    "periodos": [2013],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4408,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular"
+      },
+      {
+        "codigo": 4409,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4410,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4865,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular"
+      },
+      {
+        "codigo": 4411,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular"
+      },
+      {
+        "codigo": 4412,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4413,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4866,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e obtiveram pelo menos um medicamento para hipertensão no programa farmácia popular"
+      }
+    ]
+  },
+  {
+    "agregador": 4445,
+    "periodos": [2013, 2019],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4414,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses"
+      },
+      {
+        "codigo": 4415,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4416,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4867,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses"
+      },
+      {
+        "codigo": 4417,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses"
+      },
+      {
+        "codigo": 4418,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4419,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4868,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e receberam assistência médica para hipertensão nos últimos 12 meses"
+      }
+    ]
+  },
+  {
+    "agregador": 4453,
+    "periodos": [2013],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4420,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde"
+      },
+      {
+        "codigo": 4421,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4422,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4869,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde"
+      },
+      {
+        "codigo": 4423,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde"
+      },
+      {
+        "codigo": 4424,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4425,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4870,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e que realizaram a última consulta em unidade básica de saúde"
+      }
+    ]
+  },
+  {
+    "agregador": 4469,
+    "periodos": [2013],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4444,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação"
+      },
+      {
+        "codigo": 4445,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4446,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4877,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação"
+      },
+      {
+        "codigo": 4447,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação"
+      },
+      {
+        "codigo": 4448,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4449,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4878,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e se internaram por causa da hipertensão ou de alguma complicação"
+      }
+    ]
+  },
+  {
+    "agregador": 4475,
+    "periodos": [2013, 2019],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4450,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação"
+      },
+      {
+        "codigo": 4451,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4452,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4879,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação"
+      },
+      {
+        "codigo": 4453,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação"
+      },
+      {
+        "codigo": 4454,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4455,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4880,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de hipertensão arterial e possuem grau intenso ou muito intenso de limitações nas atividades habituais devido à hipertensão ou de alguma complicação"
+      }
+    ]
+  },
+  {
+    "agregador": 4627,
+    "periodos": [2013, 2019],
+    "sexos": [],
+    "gruposIdade": [95253, 33061, 33062, 1152, 33063, 33064],
+    "domicilios": [6795, 1, 2],
+    "nivelGeografico": ["N1", "N2", "N3"],
+    "variaveis": [
+      {
+        "codigo": 4570,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC"
+      },
+      {
+        "codigo": 4571,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4572,
+        "nome": "Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4919,
+        "nome": "Coeficiente de variação - Pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC"
+      },
+      {
+        "codigo": 4573,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC"
+      },
+      {
+        "codigo": 4574,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC, considerando um intervalo de confiança de 95% - limite inferior"
+      },
+      {
+        "codigo": 4575,
+        "nome": "Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC, considerando um intervalo de confiança de 95% - limite superior"
+      },
+      {
+        "codigo": 4920,
+        "nome": "Coeficiente de variação - Percentual de pessoas de 18 anos ou mais de idade que referem diagnóstico médico de AVC"
+      }
+    ]
+  }
+]

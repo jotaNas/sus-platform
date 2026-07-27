@@ -1,9 +1,0 @@
-[submodule "cardioradar-sus"]
-	path = cardioradar-sus
-	url = https://github.com/jotaNas/cardioradar-sus.git
-[submodule "integracao-api"]
-	path = integracao-api
-	url = https://github.com/joaopassone/integracao-api.git
-[submodule "remedsus"]
-	path = remedsus
-	url = https://github.com/jotaNas/remedsus.git

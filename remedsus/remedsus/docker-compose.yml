@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: remedsus-postgres
+    environment:
+      POSTGRES_DB: remedsus
+      POSTGRES_USER: remedsus
+      POSTGRES_PASSWORD: remedsus
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
