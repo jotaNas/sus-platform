@@ -1,0 +1,363 @@
+{
+  "info": {
+    "_postman_id": "f9bf5dcb-6318-471c-8a7f-92ef9a81c9b1",
+    "name": "CardioRadarSus",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31735678",
+    "_collection_link": "https://go.postman.co/collection/31735678-f9bf5dcb-6318-471c-8a7f-92ef9a81c9b1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Buscar Estabelecimento Saúde",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"uf\": \"MG\",\r\n    \"codigoMunicipio\": 310620,\r\n    \"codigoTipoUnidade\": 2,\r\n    \"status\": 1,\r\n    \"limit\": 1,\r\n    \"offset\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/estabelecimento/consultar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "estabelecimento",
+            "consultar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Estabelecimento no RemedSUS",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Verifica se a requisição retornou sucesso (Status 200 ou 201)\r",
+              "if (pm.response.code === 200 || pm.response.code === 201) {\r",
+              "    // Transforma o corpo da resposta em um objeto JavaScript\r",
+              "    const resposta = pm.response.json();\r",
+              "    \r",
+              "    // Salva o ID da unidade em uma variável global do Postman\r",
+              "    pm.globals.set(\"unidadeId\", resposta.id);\r",
+              "    \r",
+              "    console.log(\"Unidade guardada com sucesso! ID: \" + resposta.id);\r",
+              "}\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"CENTRO DE SAUDE PILAR OLHOS DAGUA\",\r\n    \"tipo\": \"UBS\",\r\n    \"municipio\": \"Belo Horizonte\",\r\n    \"bairro\": \"SERRA DO CURRAL\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/v1/unidades-saude",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "v1",
+            "unidades-saude"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Losartana",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "if (pm.response.code === 200 || pm.response.code === 201) {\r",
+              "    const resposta = pm.response.json();\r",
+              "    \r",
+              "    // Salva o ID do medicamento na memória global\r",
+              "    pm.globals.set(\"medicamentoId\", resposta.id);\r",
+              "    \r",
+              "    console.log(\"Medicamento guardado com sucesso! ID: \" + resposta.id);\r",
+              "}\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Losartana Potassica\",\r\n    \"principioAtivo\": \"Losartana Potassica\",\r\n    \"apresentacao\": \"50 mg comprimido\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/v1/medicamentos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "v1",
+            "medicamentos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Entrada Estoque",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"unidadeId\": \"{{unidadeId}}\",\r\n  \"medicamentoId\": \"{{medicamentoId}}\",\r\n  \"numeroLote\": \"LOS-2026-001\",\r\n  \"validade\": \"2027-12-31\",\r\n  \"quantidade\": 100\r\n}\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/v1/estoques/entradas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "v1",
+            "estoques",
+            "entradas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Consumo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"unidadeId\": \"{{unidadeId}}\",\r\n  \"medicamentoId\": \"{{medicamentoId}}\",\r\n  \"quantidade\": 70\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/v1/estoques/dispensacoes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "v1",
+            "estoques",
+            "dispensacoes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Município Monitorado",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "if (pm.response.code === 200 || pm.response.code === 201) {\r",
+              "    const resposta = pm.response.json();\r",
+              "    \r",
+              "    // Salva o ID do município para usar nos indicadores do CardioRadar\r",
+              "    pm.globals.set(\"municipioId\", resposta.id);\r",
+              "    \r",
+              "    console.log(\"Município guardado com sucesso! ID: \" + resposta.id);\r",
+              "}\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"codigoIbge\": \"3106200\",\r\n  \"nome\": \"Belo Horizonte\",\r\n  \"uf\": \"MG\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/v1/municipios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "v1",
+            "municipios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Indicador Cardiovascular",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"municipioId\": \"{{municipioId}}\",\r\n  \"competencia\": \"2026-07\",\r\n  \"populacaoEstimada\": 2315560,\r\n  \"populacaoIdosa\": 320000,\r\n  \"atendimentosHipertensao\": 1500,\r\n  \"atendimentosDiabetes\": 800,\r\n  \"internacoesCardiovasculares\": 520,\r\n  \"obitosCardiovasculares\": 90,\r\n  \"procedimentosCardiovasculares\": 2200,\r\n  \"fonte\": \"MANUAL\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/v1/indicadores-cardiovasculares",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "v1",
+            "indicadores-cardiovasculares"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calcular o risco",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"municipioId\": \"{{municipioId}}\",\r\n  \"competencia\": \"2026-07\",\r\n  \"pressaoMedicamentoId\": \"{{$guid}}\",\r\n  \"medicamento\": \"Losartana Potassica 50 mg\",\r\n  \"consumoMensalMedio\": 70,\r\n  \"estoqueAtual\": 30\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/v1/riscos/calcular",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "v1",
+            "riscos",
+            "calcular"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Dados CardioRadar Dashboard",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/v1/riscos/municipios/{{municipioId}}/dashboard",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "v1",
+            "riscos",
+            "municipios",
+            "{{municipioId}}",
+            "dashboard"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Dados RemedSUS Dashboard",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/v1/dashboard",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "v1",
+            "dashboard"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
